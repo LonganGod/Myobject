@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格的动态生成及删除</title>
+</head>
+<body>
+    <table class="list">
+        <tr>
+            <th>
+                <input id="all" type="checkbox">
+                <label for="all">全选</label>
+            </th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>学号</th>
+            <th><button>一键删除</button></th>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>张三</td>
+            <td>男</td>
+            <td>130340129</td>
+            <td><button>删除</button></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>张三</td>
+            <td>男</td>
+            <td>130340129</td>
+            <td><button>删除</button></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>张三</td>
+            <td>男</td>
+            <td>130340129</td>
+            <td><button>删除</button></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>张三</td>
+            <td>男</td>
+            <td>130340129</td>
+            <td><button>删除</button></td>
+        </tr>
+    </table>
+    <button class="add_btn">添加信息</button>
+    <button class="reverse_btn">反选信息</button>
+
+    <script>
+        var add_btn = document.querySelector('.add_btn');
+        var tlist = document.querySelector('.list').children[0];
+        var sChecked = document.querySelectorAll('.list td:first-child input');
+        var checkAll = document.querySelector('#all');
+        var reverse_btn = document.querySelector('.reverse_btn');
+        var remove_btn = document.querySelectorAll('.list td button');
+        
+        // 添加人员
+        function add_people () {
+            var tr = document.createElement('tr');
+            tlist.appendChild(tr);
+
+            var sCheckbox = document.createElement('td');
+            sCheckbox.innerHTML = '<input type="checkbox">';
+            tr.appendChild(sCheckbox);
+
+            var newBox = sCheckbox.firstChild;
+            newBox.onclick = function () {
+                check();
+            }
+
+            var sName = document.createElement('td');
+            sName.innerText = '张三';
+            tr.appendChild(sName);
+
+            var sSex = document.createElement('td');
+            sSex.innerText = '男';
+            tr.appendChild(sSex);
+
+            var sNum = document.createElement('td');
+            sNum.innerText = '130340129';
+            tr.appendChild(sNum);
+
+            var sRemove = document.createElement('td');
+            sRemove.innerHTML = '<button>删除</button>';
+            tr.appendChild(sRemove);
+
+            var newRemove_btn = sRemove.firstChild;
+            newRemove_btn.onclick = function () {
+                var re_tr = this.parentNode.parentNode;
+                tlist.removeChild(re_tr);
+            }
+        }
+
+        // 声明选项和全选按钮之间关系的函数
+        function check () {
+            sChecked = document.querySelectorAll('.list td:first-child input');
+            var num = 0;
+            for (var i = 0; i < sChecked.length; i++) {
+                if (sChecked[i].checked == true) {
+                    num += 1;
+                }
+            }
+            if (num == sChecked.length) {
+                checkAll.checked = true;
+            } else {
+                checkAll.checked = false;
+            }
+        }
+
+        // 全选
+        function ckAll () {
+            sChecked = document.querySelectorAll('.list td:first-child input');
+            if (checkAll.checked == true) {
+                for (var i = 0; i < sChecked.length; i++) {
+                    sChecked[i].checked = true;
+                }
+            } else {
+                for (var i = 0; i < sChecked.length; i++) {
+                    sChecked[i].checked = false;
+                }
+            }
+        }
+
+        // 反选
+        function reverse () {
+            sChecked = document.querySelectorAll('.list td:first-child input');
+            for (var i = 0; i < sChecked.length; i++) {
+                if (sChecked[i].checked == true) {
+                    sChecked[i].checked = false;
+                } else {
+                    sChecked[i].checked = true;
+                }
+            }
+        }
+        
+        // 动态生成信息
+        add_btn.onclick = function () {
+            sChecked = document.querySelectorAll('.list td:first-child input');
+            add_people();
+            check();
+        }
+
+        // 单选
+        for (var j = 0; j < sChecked.length; j++) {
+            sChecked[j].onclick = function () {
+                check();
+            }
+        }
+        
+        // 全选按钮功能实现
+        checkAll.onclick = function () {
+            ckAll();
+        }
+        
+        // 反选按钮功能实现
+        reverse_btn.onclick = function () {
+            reverse();
+            check();
+        }
+        
+        // 删除单项
+        for (var i = 0; i < sChecked.length; i++) {
+            remove_btn[i].onclick = function () {
+                var re_tr = this.parentNode.parentNode;
+                tlist.removeChild(re_tr);
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>隔行变色</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    table {
+        margin: 200px auto;
+    }
+
+    .list td {
+        border-radius: 3px;
+    }
+
+    .even_bgc {
+        background-color: skyblue;
+    }
+
+    .odd_bgc {
+        background-color: gold;
+    }
+
+
+    /* ul {
+        text-decoration: none;
+        list-style: none;
+    }
+
+    ul li {
+        height: 20px;
+    }
+
+    li:nth-child(even) {
+        background-color: skyblue;
+    }
+
+    li:nth-child(odd) {
+        background-color: gold;
+    }
+
+    ul .bg_color {
+        background-color: #fff;
+    } */
+</style>
+<body>
+    <table class="list"></table>
+
+    <script>
+
+        // 创建乘法口诀表
+        var tlist = document.querySelector('.list');
+        var str = '';
+
+        for (var i = 1; i <= 9; i++) {
+            str += '<tr>';
+            for (var j = 1; j <= i; j++) {
+                str += '<td>' + j + 'X' + i + '=' + j * i + '</td>';
+            }
+            str += '</tr>';
+        }
+
+        tlist.innerHTML = str;
+
+        // 隔行变色
+
+        var trs = document.querySelectorAll('.list tr');
+        
+        // 增添下标
+        for (var i = 0; i < trs.length; i++) {
+            trs[i].index = i;
+        }
+
+        for (var j = 0; j < trs.length; j++) {
+            trs[j].onmouseover = function () {
+                if (this.index % 2 == 0) {
+                    this.className = 'even_bgc';
+                } else {
+                    this.className = 'odd_bgc';
+                }
+            }
+
+            trs[j].onmouseout = function () {
+                this.className = '';
+            }
+        }
+    </script>
+
+    <!-- <ul>
+        <li class="bg_color">wrrerwe</li>
+        <li class="bg_color">wrrerwe</li>
+        <li class="bg_color">wrrerwe</li>
+        <li class="bg_color">wrrerwe</li>
+        <li class="bg_color">wrrerwewrrerwe</li>
+        <li class="bg_color">wrrerwe</li>
+    </ul>
+    <script>
+        var lis = document.querySelectorAll('ul li');
+        
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onmousemove = function () {
+                this.className = '';
+            }
+
+            lis[i].onmouseout = function () {
+                this.className = 'bg_color';
+            }
+        } 
+    </script> -->
+</body>
+</html>

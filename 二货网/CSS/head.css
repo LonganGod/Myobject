@@ -1,0 +1,60 @@
+h1 {
+	font-size: 23px;
+	font-weight: 400;
+	float: left;
+}
+
+li {
+	transition: all linear 0.3s;
+}
+
+.m_r {
+	margin-right: 0px ! important;
+}
+
+.p_t {
+	padding-top: 0px ! important;
+}
+
+/* 顶部开始 */
+.top {
+	background-color: #333333;
+}
+
+.top ul {
+	height: 40px;
+	float: left;
+}
+
+.top .left {
+	float: left;
+}
+
+.top .right {
+	float: right;
+}
+
+.top .noborder {
+	border-style: none;
+	margin-right: 5px;
+}
+
+.top ul li {
+	margin-top: 10px;
+	float: left;
+	padding: 0 6px;
+	border-right: 1px solid #393d42;
+}
+
+.top .gouwuche {
+	padding-top: 10px;
+	padding-left: 50px;
+	width: 80px;
+	height: 30px;
+	background: #424242 url(../images/购物车.png) 10px center no-repeat;
+	float: right;
+}
+
+.top a {
+	color: #b0b0b0;
+}

@@ -1,0 +1,118 @@
+/* 表单 */
+
+.regist_form {
+	height: 520px;
+	border: 1px solid #393d42;
+	margin-top: 50px;
+}
+
+.regist_form .regist_form_title {
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #393d42;
+	background-color: #393d42;
+	padding: 0 20px;
+}
+
+.regist_form .regist_form_title h1 {
+	color: #fee7b8;
+}
+
+.regist_form form {
+	width: 600px;
+	margin: 70px auto;
+}
+
+.public {
+	margin-bottom: 20px;
+}
+
+.public label {
+	display: block;
+	float: left;
+	width: 100px;
+	line-height: 32px;
+	margin-right: 10px;
+	display: inline-block;
+	text-align: right;
+}
+
+.public input {
+	display: block;
+	float: left;
+	width: 225px;
+	height: 32px;
+	border: 1px solid #393d42;
+	padding-left: 10px;
+}
+
+.public span {
+	display: block;
+	float: left;
+	height: 32px;
+	line-height: 32px;
+	font-size: 12px;
+	padding-left: 25px;
+	margin-left: 10px;
+}
+
+.public .wrong {
+	background: url(../images/wrong.png) no-repeat 0 center;
+	color: #e85d5e;
+}
+
+.public .right {
+	background: url(../images/right.png) no-repeat 0 center;
+	color: #39ba36;
+}
+
+.safety {
+	font-size: 12px;
+	margin-bottom: 15px;
+	margin-left: 200px;
+}
+
+.safety span {
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	color: #fff;
+	background-color: #666;
+}
+
+.safety .green {
+	background-color: green;
+}
+
+.safety .orange {
+	background-color: orange;
+}
+
+.safety .red {
+	background-color: red;
+}
+
+.other {
+	margin-left: 115px;
+	width: 200px;
+}
+
+.other button {
+	margin-top: 20px;
+	width: 200px;
+	height: 30px;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	background-color: #ff6700;
+}
+
+/* 底部 */
+
+.footer_bgc {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}

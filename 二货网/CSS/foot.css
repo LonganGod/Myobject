@@ -1,0 +1,62 @@
+/* 底部 */
+
+.footer_bgc {
+	margin-top: 40px;
+	background-color: #393d42;
+}
+
+.f_top {
+	height: 80px;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.f_top ul li {
+	margin-top: 28px;
+	height: 20px;
+	line-height: 20px;
+	width: 243px;
+	font-size: 16px;
+	text-align: center;
+	border-left: 1px solid #e0e0e0;
+	float: left;
+	color: #fff;
+}
+
+.f_top ul li:first-child {
+	border: none;
+}
+
+.f_top .img p {
+	margin-top: 28px;
+	margin-left: 10px;
+	width: 60px;
+	line-height: 15px;
+	padding-left: 30px;
+	color: #fff;
+	float: right;
+}
+
+.f_top .img .one {
+	background: url(../images/xin.png) 0 center no-repeat;
+}
+
+.f_top .img .two {
+	background: url(../images/hua.png) 0 center no-repeat;
+}
+
+.f_top .img .three {
+	background: url(../images/dun.png) 0 center no-repeat;
+}
+
+/* 底部第二部分开始 */
+
+.f_2 .f2_bottom {
+	margin-top: 34px;
+	font: 20px "楷体";
+	color: #bababa;
+	text-align: center;
+}
+
+.f2_bd {
+	padding-bottom: 30px;
+}

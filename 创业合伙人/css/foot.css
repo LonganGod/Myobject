@@ -1,0 +1,64 @@
+/*底部 */
+
+.footer {
+	margin-top: 30px;
+	height: 200px;
+	background-color: #515151;
+}
+
+.footer .f_top {
+	padding-left: 134px;
+	height: 126px;
+	border-bottom: 1px solid #5f5f5f;
+	box-sizing: border-box;
+}
+
+.footer .f_top .logo {
+	margin-right: 120px;
+	margin-top: 36px;
+	display: block;
+	width: 236px;
+	height: 54px;
+	background: url(../images/foot-logo.png) no-repeat;
+}
+
+.footer .f_top .f_text {
+	margin-top: 50px;
+}
+
+.footer .f_top .f_text p:first-child,
+.footer .f_top .f_text p:first-child a {
+	font-size: 16px;
+	color: #fff;
+}
+
+.footer .f_top .f_text p:first-child span {
+	margin: 0 10px;
+}
+
+.footer .f_top .f_text p:last-child {
+	font-size: 12px;
+	text-align: center;
+	color: #999;
+}
+
+.footer .f_bottom {
+	margin-top: 15px;
+	margin-left: 134px;
+}
+
+.footer .f_bottom p:first-child,
+.footer .f_bottom p:first-child a {
+	font-size: 12px;
+	color: #999;
+}
+
+.footer .f_bottom p:first-child span {
+	margin: 10px;
+}
+
+.footer .f_bottom p:last-child {
+	font-size: 12px;
+	color: #999;
+	margin-top: 10px;
+}

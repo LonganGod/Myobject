@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第二种添加节点的方法</title>
+</head>
+
+<style>
+    .list {
+        margin: 200px auto;
+    }
+</style>
+<body>
+    <table class="list"></table>
+
+    <script>
+        var tlist = document.querySelector('.list');
+
+        for (var i = 1; i <= 9; i++) {
+
+            var tr = document.createElement('tr');
+            tlist.appendChild(tr);
+
+            for (var j = 1; j <= i; j++) {
+
+                var td = document.createElement('td');
+                td.innerText = j + 'X' + i + '=' + j * i;
+                tr.appendChild(td);
+
+            }
+        }
+    </script>
+</body>
+</html>

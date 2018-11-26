@@ -1,0 +1,57 @@
+/*
+* @Author: 阿萨德
+* @Date:   2018-08-11 13:51:44
+* @Last Modified by:   阿萨德
+* @Last Modified time: 2018-08-12 08:23:58
+*/
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, input {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	color: #333333;
+	font-size: 12px;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+input {
+	border-style: none;
+	outline-style: none;
+}
+
+h6 {
+	font-size: 14px;
+	color: #000;
+	/* font-weight: 400; */
+}
+
+.w {
+	width: 1226px;
+	margin: 0 auto;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.active {
+	display: block !important;
+}
+
+.none {
+	display: none !important;
+}

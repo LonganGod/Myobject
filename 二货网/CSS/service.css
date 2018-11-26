@@ -1,0 +1,39 @@
+/* 更改底部样式 */
+.footer_bgc {
+    margin-top: 0;
+}
+
+/* 主体 */
+.service_main {
+    background-color: #f4f6f8;
+    overflow: hidden;
+    box-shadow: inset 2px 0px 3px #ccc;
+}
+
+.service_main .service_txt {
+    margin-top: 32px;
+    margin-bottom: 50px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0px 0px 3px #ccc;
+}
+
+.service_main .service_txt h2 {
+    font: 400 20px/62px 'microsoft yahei';
+    height: 62px;
+    border-bottom: 1px solid #ccc;
+}
+
+.service_main .service_txt p {
+    line-height: 24px;
+}
+
+.service_main .service_txt p:last-child {
+    padding-bottom: 20px;
+}
+
+.service_main .service_txt strong {
+    display: block;
+    margin-top: 15px;
+}

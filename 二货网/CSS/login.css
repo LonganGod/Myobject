@@ -1,0 +1,94 @@
+/* 登录表单 */
+
+.login_body {
+    height: 800px;
+    background: url(../images/login_img.jpg) no-repeat 0 -700px;
+    background-size: cover;
+}
+
+.login_box {
+    width: 350px;
+    height: 450px;
+    float: right;
+    margin-top: 150px;
+    margin-right: 40px;
+    background-color: #fff;
+    border: 1px solid #393d42;
+}
+
+.login_box .title {
+    height: 50px;
+    line-height: 50px;
+    background-color: #393d42;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.login_box .title h1 {
+    color: #fee7b8;
+}
+
+.login_box .public {
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.public label {
+	display: block;
+    width: 310px;
+    line-height: 32px;
+    font-size: 16px;
+	margin-right: 10px;
+    display: inline-block;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background-color: #393d42;
+    color: #fee7b8;
+}
+
+.public input {
+    display: block;
+    width: 310px;
+    height: 32px;
+	border: 1px solid #393d42;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.public span {
+    display: block;
+	height: 32px;
+	line-height: 32px;
+	font-size: 12px;
+	padding-left: 25px;
+}
+
+.public .wrong {
+	background: url(../images/wrong.png) no-repeat 0 center;
+	color: #e85d5e;
+}
+
+.public .right {
+	background: url(../images/right.png) no-repeat 0 center;
+	color: #39ba36;
+}
+
+.other button {
+    display: block;
+    margin: 20px auto;
+	width: 200px;
+	height: 40px;
+	border: none;
+    cursor: pointer;
+    font-size: 16px;
+	color: #393d42;
+	background-color: #fee7b8;
+}
+
+/* 底部 */
+
+.footer_bgc {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}

@@ -1,0 +1,57 @@
+body, p, h1, h2, h3, h4, h5, h6,
+ul, ol, dl, li, dt, dd {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	color: #606460;
+	font-size: 14px;
+}
+
+a {
+	color: #606460;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #2c9af4;
+}
+
+input, img {
+	vertical-align: middle;
+	border: 0 none;
+	outline-style: none;
+}
+
+.w {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+.clearfix::after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.none {
+	display: none;
+}
+
+.active {
+	display: block;
+}
