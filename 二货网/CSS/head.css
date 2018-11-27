@@ -46,15 +46,6 @@ li {
 	border-right: 1px solid #393d42;
 }
 
-.top .gouwuche {
-	padding-top: 10px;
-	padding-left: 50px;
-	width: 80px;
-	height: 30px;
-	background: #424242 url(../images/购物车.png) 10px center no-repeat;
-	float: right;
-}
-
 .top a {
 	color: #b0b0b0;
 }
