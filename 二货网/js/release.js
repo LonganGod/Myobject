@@ -115,3 +115,27 @@ function onInputBlur (info) {
         prompt.innerText = '';
     }
 }
+
+var btn = document.querySelector(".btn");
+var legion = document.querySelectorAll('.legion');
+
+btn.onclick = function () {
+    var num = 0;
+
+    for (var i = 0; i < legion.length; i++) {
+        var wrong = legion[i].parentNode.parentNode.querySelector("td:last-child").className;
+        var value = legion[i].value;
+
+        if (wrong == 'wrong' || value == '') {
+            num++;
+        }
+    }
+
+    if (num == 0) {
+        alert('保存成功');
+    } else {
+        alert('保存失败');
+        return false;
+    }
+
+}

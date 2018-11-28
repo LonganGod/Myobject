@@ -1,0 +1,154 @@
+.uda_main {
+    margin-top: 50px;
+    border: 1px solid #393d42;
+}
+
+.uda_main .uda_title {
+    margin-bottom: 20px;
+    background-color: #393d42;
+}
+
+.uda_main .uda_title a {
+    display: block;
+    float: left;
+    padding: 0 20px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+    color: #fee7b8;
+}
+
+.uda_main .uda_title a:first-child {
+    border-right: 2px solid #fee7b8;
+}
+
+.uda_main .uda_title a:hover {
+    background-color: #4e5358;
+}
+
+.uda_main tr {
+    display: block;
+    margin-top: 15px;
+    margin-left: 40px;
+}
+
+.uda_main tr td:first-child {
+    width: 120px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #393d42;
+    vertical-align: top;
+}
+
+.uda_main .public {
+    border: 1px solid #393d42;
+    width: 450px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.uda_main .sex label {
+    font-size: 16px;
+}
+
+.uda_main .sex input {
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.uda_main .goods_public {
+    border: 1px solid #393d42;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.uda_main .head_photo {
+    display: table;
+    margin-right: 20px;
+    float: left;
+    height: 80px;
+    width: 80px;
+    position: relative;
+    border: 2px solid #393d42;
+    border-radius: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.uda_main .head_photo input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.uda_main .head_photo i {
+    display: block;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: #393d42;
+    font-size: 40px;
+}
+
+.uda_main .head_photo span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.uda_main .head_photo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.uda_main .head_photo .close {
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    font-size: 8px;
+    color: #fee7b8;
+    background-color: #393d42;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.uda_main .btn {
+    display: block;
+    margin: 20px auto;
+    border: none;
+    width: 200px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fee7b8;
+    background-color: #393d42;
+    cursor: pointer;
+}
+
+.uda_main tr td:last-child {
+	font-size: 14px;
+    line-height: 30px;
+	padding-left: 60px;
+}
+
+.uda_main tr .wrong {
+	background: url(../images/wrong.png) no-repeat 30px center;
+	color: #e85d5e;
+}
