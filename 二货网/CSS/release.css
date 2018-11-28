@@ -1,0 +1,129 @@
+.release_main {
+    margin-top: 50px;
+    border: 1px solid #393d42;
+}
+
+.release_main .release_title {
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    background-color: #393d42;
+    font-size: 16px;
+    color: #fee7b8;
+}
+
+.release_main tr {
+    display: block;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.release_main tr td:first-child {
+    width: 120px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #393d42;
+    vertical-align: top;
+}
+
+.release_main .public {
+    border: 1px solid #393d42;
+    width: 450px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.release_main .goods_public {
+    border: 1px solid #393d42;
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.release_main .good_imgs {
+    display: table;
+    margin-right: 20px;
+    float: left;
+    height: 80px;
+    width: 80px;
+    position: relative;
+    border-radius: 15px;
+}
+
+.release_main .good_imgs input {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.release_main .good_imgs i {
+    display: block;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: #393d42;
+    font-size: 40px;
+}
+
+.release_main .good_imgs span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.release_main .good_imgs img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.release_main .good_imgs .close {
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    text-align: center;
+    font-size: 8px;
+    color: #fee7b8;
+    background-color: #393d42;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.release_main .btn {
+    display: block;
+    margin: 20px auto;
+    border: none;
+    width: 200px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fee7b8;
+    background-color: #393d42;
+    cursor: pointer;
+}
+
+.release_main tr td:last-child {
+	font-size: 14px;
+    line-height: 30px;
+	padding-left: 60px;
+}
+
+.release_main tr .wrong {
+	background: url(../images/wrong.png) no-repeat 30px center;
+	color: #e85d5e;
+}
