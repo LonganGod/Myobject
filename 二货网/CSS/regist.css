@@ -1,4 +1,7 @@
 /* 表单 */
+.regist_body {
+	padding-bottom: 160px;
+}
 
 .regist_form {
 	height: 520px;
@@ -111,8 +114,8 @@
 
 /* 底部 */
 
-.footer_bgc {
+/* .footer_bgc {
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
-}
+} */

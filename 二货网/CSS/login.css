@@ -1,7 +1,8 @@
 /* 登录表单 */
 
 .login_body {
-    height: 800px;
+    height: 600px;
+    padding-bottom: 170px;
     background: url(../images/login_img.jpg) no-repeat 0 -700px;
     background-size: cover;
 }
@@ -85,10 +86,6 @@
 	background-color: #fee7b8;
 }
 
-/* 底部 */
-
 .footer_bgc {
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
+    margin-top: 0;
 }
