@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base target="_self">
+    <title>登录页面</title>
+
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/head.css">
+    <link rel="stylesheet" href="./CSS/foot.css">
+    <link rel="stylesheet" href="./CSS/login.css">
+</head>
+<body>
+    <!-- 顶部表单 -->
+	<div class="top clearfix">
+		<div class="w">
+			<ul class="left">
+				<li><a href="./index.asp">首页</a></li>
+				<li class="noborder"><a href="./service.asp">关于我们</a></li>
+			</ul>
+			<div class="right">
+				<ul>
+					<li><a href="#">登录</a></li>
+					<li class="noborder"><a href="./regist.html">注册</a></li>
+				</ul>
+			</div>
+	
+		</div>
+    </div>
+    
+    <!-- 表单 -->
+    <div class="login_body">
+        <div class="w">
+            <div class="login_box">
+                <div class="title clearfix">
+                    <h1>账号密码登录</h1>
+                </div>
+                <form action="./userLogin.asp" method="POST" target="_self">
+                    <div class="public clearfix">
+                        <label for="phone">手机号：</label>
+                        <input type="text" name="phone" id="phone" placeholder="请输入手机号">
+                        <span></span>
+                    </div>
+                    <div class="public clearfix">
+                        <label for="psw">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
+                        <input type="password" name="psw" id="psw" placeholder="请输入密码">
+                        <span></span>
+                    </div>
+                    <div class="other">
+                        <button>登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+	<div class="footer_bgc">
+		<div class="footer w clearfix">
+			<div class="f_top">
+				<ul>
+					<li>卖家实名认证</li>
+					<li>专业团队支撑</li>
+					<li>学生放心交易</li>
+				</ul>
+				<div class="img">
+					<p class="one">诚信网站<br>示范企业</p>
+					<p class="two">可信网站<br>信用评价</p>
+					<p class="three">网上交易<br>保障中心</p>
+				</div>
+			</div>
+		</div>
+		<div class="f2_bd">
+			<div class="f_2 w">
+				<div class="f2_bottom">
+					二货网，河北工程大学生专属的二手货交易网！
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="./js/login.js"></script>
+
+</html>

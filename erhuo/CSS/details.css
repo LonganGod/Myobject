@@ -1,0 +1,122 @@
+
+.detials_main .master {
+    margin-top: 50px;
+    background-color: #393d42;
+    box-sizing: border-box;
+}
+
+.detials_main .master .m_info {
+    float: left;
+    width: 234px;
+    height: 60px;
+    border-right: 1px solid #fee7b8;
+    position: relative;
+}
+
+.master .m_info p {
+    float: left;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #fee7b8;
+}
+
+.master .m_info i {
+    display: block;
+    float: right;
+    margin-right: 20px;
+    font-size: 18px;
+    line-height: 60px;
+    color: #fee7b8;
+}
+
+.m_info .info_list {
+    width: 234px;
+    padding-left: 20px;
+    border: 1px solid #393d42;
+    border-top: 1px solid #fee7b8;
+    background-color: #393d42;
+    padding-bottom: 10px;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.m_info .info_list li {
+    padding: 10px 0;
+    font-size: 14px;
+    color: #fee7b8;
+}
+
+.detials_main .data {
+    float: right;
+    font-size: 16px;
+    line-height: 60px;
+    color: #fee7b8;
+    margin-right: 20px;
+}
+
+/* 商品详情 */
+
+.info_content_left,
+.info_content_right {
+    margin-top: 20px;
+    float: left;
+}
+
+.info_content_left .info_img {
+    width: 600px;
+    height: 530px;
+    background: url() no-repeat center rgba(0, 0, 0, .05);
+    background-size: contain;
+    transition: background 1s;
+}
+
+.info_content_left .info_img_list li{
+    float: left;
+    width: 90px;
+    height: 80px;
+    margin: 30px 13px 0;
+    border: 2px solid #ccc;
+}
+
+.info_content_left .info_img_list li.active {
+    border: 2px solid #ff6700;
+}
+
+.info_img_list li img {
+    display: block;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.info_content_right .info_title {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 600px;
+}
+
+.info_content_right .info_title h2 {
+    font-size: 28px;
+}
+
+.info_content_right .info_title table {
+    margin-top: 10px;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.info_title tr {
+    display: block;
+    margin-top: 20px;
+}
+
+.info_title tr td:first-child {
+    vertical-align: top;
+    width: 100px;
+}
+
+.info_title table .strong {
+    font-weight: 700;
+    color: #ff6700;
+}
