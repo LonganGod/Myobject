@@ -21,7 +21,7 @@
             <ul class="left">
                 <li><a href="./index.asp">首页</a></li>
                 <li><a href="./release.asp">发布闲置</a></li>
-                <li class="noborder"><a href="./service.asp">关于我们</a></li>
+                <li class="noborder"><a href="./service.html">关于我们</a></li>
             </ul>
             <div class="right">
                 <ul>

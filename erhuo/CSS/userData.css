@@ -74,8 +74,6 @@
     height: 80px;
     width: 80px;
     position: relative;
-    border: 2px solid #393d42;
-    border-radius: 50%;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -112,6 +110,8 @@
     margin: 0 auto;
     max-width: 80px;
     max-height: 80px;
+    border: 2px solid #393d42;
+    border-radius: 50%;
 }
 
 .uda_main .head_photo .close {

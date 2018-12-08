@@ -21,7 +21,7 @@
         response.Write "<script>alert('注册失败，该用户名已存在，请重新输入');location.href='regist.html';</script>"
         else
         str1 = "insert into User(UserPhone, Password) values('" & phone & "', '" & psw & "')"
-        str2 = "insert into UserInfo(UserPhone, Userphoto, UserName, UserSex, UserSignature, UserQQ, UserPlace, UserData) values('" & phone & "', '', '" & userName & "', '', '', '', '', '" & date() & "')"
+        str2 = "insert into UserInfo(UserPhone, Userphoto, UserName, UserSex, UserSignature, UserQQ, UserPlace, UserData) values('" & phone & "', './images/userphoto/nophoto.jpg', '" & userName & "', '', '', '', '', '" & date() & "')"
         conn.execute(str1)
         conn.execute(str2)
         response.Write "<script>alert('注册成功，点击确定跳转到登录页面');location.href='login.html';</script>"

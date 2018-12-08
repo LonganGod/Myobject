@@ -73,6 +73,7 @@ function onFileChange (fileObj, el, btnel, goodsPhoto) {
         dataURL = './images/goods/' + fileObj.files[0].name;
         console.log(dataURL)
         imgObj.src = dataURL;
+        imgObj.className = 'active';
         document.getElementById(goodsPhoto).value = dataURL;
         close.className = 'close active';
     }
@@ -90,7 +91,6 @@ for (var i = 0; i < close.length; i++) {
     
         img.src = '';
         add.style.display = 'block';
-        input.files.length = 0;
         goodsPhoto.value = '';
         this.className = 'close none';
     }

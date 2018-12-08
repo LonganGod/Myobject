@@ -18,7 +18,7 @@
 		<div class="w">
 			<ul class="left">
 				<li><a href="#">首页</a></li>
-				<li class="noborder"><a href="./service.asp">关于我们</a></li>
+				<li class="noborder"><a href="./service.html">关于我们</a></li>
 			</ul>
 			<div class="right">
 				<ul>
