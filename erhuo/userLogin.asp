@@ -20,7 +20,7 @@
         session("user") = "logined"
         session("phone") = phone
 
-        response.Write "<script>location.href='userData.asp';</script>"
+        response.Write "<script>location.href='index.asp';</script>"
         else
         response.Write "<script>alert('登录失败，用户名或密码错误');location.href='login.html';</script>"
         end if

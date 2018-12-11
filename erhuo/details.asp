@@ -14,25 +14,40 @@
     <link rel="stylesheet" href="./CSS/details.css">
 </head>
 <body>
+    <!--#include file="conn.asp"-->
+	<!-- 顶部小导航 -->
+	<div class="top clearfix">
+		<div class="w">
+			<ul class="left">
+				<li><a href="index.asp">首页</a></li>
+				<li class="noborder"><a href="./service.html">关于我们</a></li>
+			</ul>
+			<div class="right">
+				<ul>
+					<li><a href="./login.html">登录</a></li>
+					<li class="noborder"><a href="./regist.html">注册</a></li>
+				</ul>
+			</div>
 
-    <!-- 顶部小导航 -->
-    <div class="top clearfix">
-        <div class="w">
-            <ul class="left">
-                <li><a href="./index.asp">首页</a></li>
-                <li><a href="./release.asp">发布闲置</a></li>
-                <li class="noborder"><a href="./service.html">关于我们</a></li>
-            </ul>
-            <div class="right">
-                <ul>
-                    <li><a href="./login.html">登录</a></li>
-                    <li class="noborder"><a href="./regist.html">注册</a></li>
-                </ul>
-            </div>
-    
-        </div>
-    </div>
-    <!--#include file="checklogin.asp"-->
+		</div>
+		<%
+		    phone = session("phone")
+
+		    set rs = server.createobject("adodb.recordset")
+		    strsql = "select * from erhuo.UserInfo where UserPhone = '" & phone & "'"
+		    rs.open strsql, conn, 1, 1 
+
+		    if session("user")="logined" then
+		%>
+		<script>
+		    var login_a = document.querySelector('.top .right a');
+		    var str = '<a href="./userData.asp"><%=server.htmlencode(rs("userName"))%></a>';
+		    login_a.innerHTML = str;
+		</script>
+		<%
+		    end if
+		%>
+	</div>
     <%
         GoodsID = cint(request("GoodsID"))
 

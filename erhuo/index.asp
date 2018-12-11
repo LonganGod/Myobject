@@ -13,6 +13,7 @@
 </head>
 
 <body>
+	<!--#include file="conn.asp"-->
 	<!-- 顶部小导航 -->
 	<div class="top clearfix">
 		<div class="w">
@@ -28,8 +29,24 @@
 			</div>
 
 		</div>
+		<%
+		    phone = session("phone")
+
+		    set rs = server.createobject("adodb.recordset")
+		    strsql = "select * from erhuo.UserInfo where UserPhone = '" & phone & "'"
+		    rs.open strsql, conn, 1, 1 
+
+		    if session("user")="logined" then
+		%>
+		<script>
+		    var login_a = document.querySelector('.top .right a');
+		    var str = '<a href="./userData.asp"><%=server.htmlencode(rs("userName"))%></a>';
+		    login_a.innerHTML = str;
+		</script>
+		<%
+		    end if
+		%>
 	</div>
-	<!--#include file="checklogin.asp"-->
 
 	<!-- 发布闲置 -->
 	<div class="sole">
@@ -60,8 +77,10 @@
 			<li>玩具乐器</li>
 		</ul>
 		<div class="sousuo">
-			<input class="txt" type="text">
-			<input class="sub" type="submit" value="搜 索">
+			<form action="./search.asp" target="_blank" method="POST">
+				<input name="searchTXT" class="txt" type="text">
+				<input class="sub" type="submit" value="搜 索">
+			</form>
 		</div>
 	</div>
 	<!-- 商品子页 -->
