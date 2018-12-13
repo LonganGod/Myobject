@@ -25,10 +25,10 @@ function onFileChange (fileObj, el) {
     var hiddenInput = document.getElementById('hiddenInput');
    
     if (fileObj && fileObj.files && fileObj.files[0]) {
+        imgObj.src = windowURL.createObjectURL(fileObj.files[0]);
         dataURL = './images/userphoto/' + fileObj.files[0].name;
-        imgObj.src = dataURL;
-        console.log(dataURL);
         hiddenInput.value = dataURL;
+        console.log(hiddenInput);
     }
 }
 

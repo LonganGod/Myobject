@@ -40,19 +40,25 @@
             <a href="#">用户个人信息填写</a>
             <a href="./myGoods.asp">我的闲置</a>
         </div>
-        <form action="./saveUserData.asp" target="_self" method="GET">
+        
+        <form action="./upphoto.asp" target="_blank" method="POST" enctype="multipart/form-data">
             <table>
                 <tr>
                     <td>上传头像:</td>
                     <td>
                         <div class="head_photo">
-                            <input id="add_img" type="file" accept="image/*">
+                            <input id="add_img" type="file" name="upfile" accept="image/*">
                             <span><img id='head_photo' src="<%=server.htmlencode(rs("Userphoto"))%>"></span>
-                            <input type="hidden" id="hiddenInput" name="userPhoto" value="<%=server.htmlencode(rs("Userphoto"))%>">
                         </div>
                     </td>
-                    <td></td>
+                    <td><button>上传头像</button> 建议图片名用英文</td>
                 </tr>
+            </table>
+        </form>
+
+        <form action="./saveUserData.asp" target="_self" method="POST">
+            <input type="hidden" id="hiddenInput" name="userPhoto" value="<%=server.htmlencode(rs("Userphoto"))%>">
+            <table>
                 <tr>
                     <td><label for="userName">昵&emsp;&emsp;称:</label></td>
                     <td><input type="text" id="userName" class="public" name="userName" value="<%=server.htmlencode(rs("userName"))%>"></td>

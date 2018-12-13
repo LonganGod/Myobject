@@ -16,10 +16,12 @@
         describe = request("describe")
         QQ = request("QQ")
         place = request("place")
-        
+
         str = "update UserInfo set Userphoto = '" & userPhoto & "', UserName = '" & userName & "', UserSex = '" & sex & "', UserSignature = '" & describe & "', UserQQ = '" & QQ & "', UserPlace = '" & place & "' where UserPhone = '" & phoneNum & "'"
         conn.execute str
-        response.Write "<script>location.href='userData.asp';</script>" 
+
+        response.Write "<script>location.href='userData.asp';</script>"
     %>
 </body>
 </html>
+

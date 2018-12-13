@@ -70,9 +70,8 @@ function onFileChange (fileObj, el, btnel, goodsPhoto) {
     var close = imgObj.parentNode.parentNode.querySelector('.close');
     
     if (fileObj && fileObj.files && fileObj.files[0]) {
+        imgObj.src =  windowURL.createObjectURL(fileObj.files[0]);
         dataURL = './images/goods/' + fileObj.files[0].name;
-        console.log(dataURL)
-        imgObj.src = dataURL;
         imgObj.className = 'active';
         document.getElementById(goodsPhoto).value = dataURL;
         close.className = 'close active';
@@ -83,11 +82,14 @@ function onFileChange (fileObj, el, btnel, goodsPhoto) {
 var close = document.querySelectorAll('.good_imgs .close');
 
 for (var i = 0; i < close.length; i++) {
+    close[i].index = i;
+
     close[i].onclick = function () {
         var img = this.parentNode.querySelector('img');
         var add = this.parentNode.querySelector('i');
-        var input = this.parentNode.querySelector('input:first-child');
-        var goodsPhoto = this.parentNode.querySelector('input:last-child');
+        var num = this.index + 1;
+        var str = 'goodsPhoto'+ num;
+        var goodsPhoto = document.getElementById(str);
     
         img.src = '';
         add.style.display = 'block';

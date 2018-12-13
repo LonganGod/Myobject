@@ -26,8 +26,6 @@
         QQ = request("QQ")
         place = request("place")
 
-        response.Write goodstype 
-
         str = "insert into Goods(UserPhone, GoodsTitle, GoodsMoney1, GoodsMoney2, GoodsDescribe, GoodsType, GoodsSituation, GoodsImg1, GoodsImg2, GoodsImg3, GoodsImg4, GoodsImg5, GoodsUserName, GoodsUserPhone, GoodsUserQQ, GoodsUserPlace, GoodsData) values('" & phone & "', '" & title & "', '" & money1 & "', '" & money2 & "', '" & describe & "', '" & goodstype & "', '" & situation & "', '" & goodsPhoto1 & "', '" & goodsPhoto2 & "', '" & goodsPhoto3 & "', '" & goodsPhoto4 & "', '" & goodsPhoto5 & "', '" & userName & "', '" & phoneNum & "', '" & QQ & "', '" & place & "', '" & date() & "')"
         conn.execute(str)
         response.Write "<script>location.href='myGoods.asp';</script>" 

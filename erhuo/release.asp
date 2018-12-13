@@ -40,7 +40,57 @@
     <!-- 表单 -->
     <div class="release_main w">
         <div class="release_title">闲置物品信息填写</div>
+        <form action="./upgoods.asp" target="_blank" method="POST" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td><label for="describe">上传照片:</label></td>
+                    <td>
+                        <div class="good_imgs">
+                            <input id="add_img1" type="file" name="upfile1" accept="image/*">
+                            <i id='img_1' class="iconfont icon-plus-circle"></i>
+                            <span><img id='good_imgs_1'></span>
+                            <div class="close none">X</div>
+                        </div>
+        
+                        <div class="good_imgs">
+                            <input id="add_img2" type="file" name="upfile2" accept="image/*">
+                            <i id='img_2' class="iconfont icon-plus-circle"></i>
+                            <span><img id='good_imgs_2'></span>
+                            <div class="close none">X</div>
+                        </div>
+        
+                        <div class="good_imgs">
+                            <input id="add_img3" type="file" name="upfile3" accept="image/*">
+                            <i id='img_3' class="iconfont icon-plus-circle"></i>
+                            <span><img id='good_imgs_3'></span>
+                            <div class="close none">X</div>
+                        </div>
+        
+                        <div class="good_imgs">
+                            <input id="add_img4" type="file" name="upfile4" accept="image/*">
+                            <i id='img_4' class="iconfont icon-plus-circle"></i>
+                            <span><img id='good_imgs_4'></span>
+                            <div class="close none">X</div>
+                        </div>
+        
+                        <div class="good_imgs">
+                            <input id="add_img5" type="file" name="upfile5" accept="image/*">
+                            <i id='img_5' class="iconfont icon-plus-circle"></i>
+                            <span><img id='good_imgs_5'></span>
+                            <div class="close none">X</div>
+                        </div>
+                    </td>
+                    <td><button>上传</button> 提示：有图片浏览量会增加，图片使用英文命名</td>
+                </tr>
+            </table>
+        </form>
+        
         <form action="./saveRelaseInfo.asp" method="POST" target="_self">
+            <input type="hidden" id="goodsPhoto1" name="goodsPhoto1" value="">
+            <input type="hidden" id="goodsPhoto2" name="goodsPhoto2" value="">
+            <input type="hidden" id="goodsPhoto3" name="goodsPhoto3" value="">
+            <input type="hidden" id="goodsPhoto4" name="goodsPhoto4" value="">
+            <input type="hidden" id="goodsPhoto5" name="goodsPhoto5" value="">
             <input type="hidden" name="phone" value="<%=phone%>">
             <table>
                 <tr>
@@ -84,51 +134,6 @@
                         </select>
                     </td>
                     <td></td>
-                </tr>
-                <tr>
-                    <td><label for="describe">上传照片:</label></td>
-                    <td>
-                        <div class="good_imgs">
-                            <input id="add_img1" type="file" accept="image/*">
-                            <i id='img_1' class="iconfont icon-plus-circle"></i>
-                            <span><img id='good_imgs_1'></span>
-                            <div class="close none">X</div>
-                            <input type="hidden" id="goodsPhoto1" name="goodsPhoto1" value="">
-                        </div>
-
-                        <div class="good_imgs">
-                            <input id="add_img2" type="file" accept="image/*">
-                            <i id='img_2' class="iconfont icon-plus-circle"></i>
-                            <span><img id='good_imgs_2'></span>
-                            <div class="close none">X</div>
-                            <input type="hidden" id="goodsPhoto2" name="goodsPhoto2" value="">
-                        </div>
-
-                        <div class="good_imgs">
-                            <input id="add_img3" type="file" accept="image/*">
-                            <i id='img_3' class="iconfont icon-plus-circle"></i>
-                            <span><img id='good_imgs_3'></span>
-                            <div class="close none">X</div>
-                            <input type="hidden" id="goodsPhoto3" name="goodsPhoto3" value="">
-                        </div>
-
-                        <div class="good_imgs">
-                            <input id="add_img4" type="file" accept="image/*">
-                            <i id='img_4' class="iconfont icon-plus-circle"></i>
-                            <span><img id='good_imgs_4'></span>
-                            <div class="close none">X</div>
-                            <input type="hidden" id="goodsPhoto4" name="goodsPhoto4" value="">
-                        </div>
-
-                        <div class="good_imgs">
-                            <input id="add_img5" type="file" accept="image/*">
-                            <i id='img_5' class="iconfont icon-plus-circle"></i>
-                            <span><img id='good_imgs_5'></span>
-                            <div class="close none">X</div>
-                            <input type="hidden" id="goodsPhoto5" name="goodsPhoto5" value="">
-                        </div>
-                    </td>
-                    <td>提示：有图片浏览量会增加</td>
                 </tr>
                 <tr>
                     <td><label for="name">联&ensp;系&ensp;人:</label></td>

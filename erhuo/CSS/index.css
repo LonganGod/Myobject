@@ -144,6 +144,7 @@
 .goods_content .goods_list li form img {
 	display: block;
 	width: 150px;
+	max-height: 150px;
 	box-sizing: border-box;
 	margin: 0 auto 30px;
 }
