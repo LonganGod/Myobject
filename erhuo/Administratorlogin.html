@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base target="_self">
+    <title>登录页面</title>
+
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/Administratorlogin.css">
+</head>
+<body>
+    <!-- 表单 -->
+    <div class="main_box">
+        <div class="title clearfix">
+            <h1>管理员登录</h1>
+        </div>
+        <form action="./Adminlogin.asp" method="POST" target="_self">
+                    <div class="public clearfix">
+                        <label for="adminName">用户名：</label>
+                        <input type="text" name="adminName" id="adminName" placeholder="请输入用户名">
+                        <span></span>
+                    </div>
+                    <div class="public clearfix">
+                        <label for="psw">密&emsp;码：</label>
+                        <input type="password" name="psw" id="psw" placeholder="请输入密码">
+                        <span></span>
+                    </div>
+                    <div class="other">
+                        <button>登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+                    </div>
+        </form>
+    </div>
+</body>
+
+<script src="./js/login.js"></script>
+
+</html>

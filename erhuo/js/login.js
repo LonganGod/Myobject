@@ -1,6 +1,8 @@
 var btn = document.querySelector(".other button");
 var public = document.querySelectorAll('div.public');
 
+console.log('Administratorlogin.html');
+
 btn.onclick = function () {
     var num = 0;
 
@@ -17,3 +19,4 @@ btn.onclick = function () {
         return false;
     }
 }
+

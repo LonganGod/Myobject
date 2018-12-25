@@ -1,0 +1,59 @@
+.mygoods {
+    background-color: #eee;
+    margin-top: 10px;
+}
+
+.mygoods table {
+    float: left;
+    width: 80%;
+    padding: 20px 0;
+}
+
+.photo img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    border: 2px solid #393d42;
+    margin-left: 20px;
+}
+
+.mygoods table td {
+    font-size: 18px;
+    min-width: 150px;
+}
+
+.mygoods table .user_Signature {
+    width: 600px;
+    padding: 0 20px;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.btns {
+    overflow: hidden;
+}
+
+.btns button {
+    display: block;
+    margin-top: 40px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border: 1px solid #393d42;
+    color: #393d42;
+    background-color: #fee7b8;
+    cursor: pointer;
+}
+
+.no_goods {
+    height: 740px;
+    overflow: hidden;
+}
+
+.no_goods p {
+    font-size: 33px;
+    text-align: center;
+    margin-top: 250px;
+}
