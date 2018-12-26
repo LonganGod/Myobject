@@ -51,14 +51,25 @@
 	<!-- 发布闲置 -->
 	<div class="sole">
 		<div class="w">
-			<div class="add_box">
-				<a href="./release.asp">
-					<i class="iconfont icon-plus-circle"></i>
-					<div class="word">
-						<h2>发布闲置</h2>
-						<p>闲置换钱，快速离手</p>
-					</div>
-				</a>
+			<div class="add">
+				<div class="add_box">
+					<a href="./release.asp">
+						<i class="iconfont icon-plus-circle"></i>
+						<div class="word">
+							<h2>发布闲置</h2>
+							<p>闲置换钱，快速离手</p>
+						</div>
+					</a>
+				</div>
+				<div class="add_box">
+					<a href="./agent.asp">
+						<i class="iconfont icon-plus-circle"></i>
+						<div class="word">
+							<h2>我要代销</h2>
+							<p>代理销售，放心托管</p>
+						</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

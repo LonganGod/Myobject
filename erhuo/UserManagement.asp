@@ -22,6 +22,7 @@
                 <li><a href="index.asp">首页</a></li>
                 <li><a href="./GoodsList.asp">商品管理</a></li>
                 <li><a href="./UserManagement.asp">用户管理</a></li>
+                <li><a href="./AgentList.asp">代销管理</a></li>
             </ul>
         </div>
     </div>

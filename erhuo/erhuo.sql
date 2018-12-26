@@ -92,3 +92,31 @@ CREATE TABLE IF NOT EXISTS `erhuo`.`Administrator` (
   PRIMARY KEY (`AdminID`),
   UNIQUE INDEX `AdminID_UNIQUE` (`AdminID` ASC) VISIBLE)
 ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `erhuo`.`Agent` (
+  `AgentID` INT NOT NULL AUTO_INCREMENT,
+  `UserPhone` VARCHAR(45) NOT NULL,
+  `AgentTitle` VARCHAR(45) NOT NULL,
+  `AgentMoney1` VARCHAR(10) NOT NULL,
+  `AgentMoney2` VARCHAR(10) NULL,
+  `AgentDescribe` VARCHAR(500) NOT NULL,
+  `AgentType` VARCHAR(20) NULL,
+  `AgentSituation` VARCHAR(10) NULL,
+  `AgentImg1` VARCHAR(1000) NULL,
+  `AgentImg2` VARCHAR(1000) NULL,
+  `AgentImg3` VARCHAR(1000) NULL,
+  `AgentImg4` VARCHAR(1000) NULL,
+  `AgentImg5` VARCHAR(1000) NULL,
+  `AgentUserName` VARCHAR(20) NOT NULL,
+  `AgentUserPhone` VARCHAR(45) NOT NULL,
+  `AgentUserQQ` VARCHAR(45) NULL,
+  `AgentUserPlace` VARCHAR(45) NOT NULL,
+  `AgentData` VARCHAR(500) NOT NULL,
+  PRIMARY KEY (`AgentID`),
+  INDEX `AgentUser_id_idx` (`AgentID` ASC, `UserPhone` ASC) VISIBLE,
+  CONSTRAINT `Agent_User_FK`
+    FOREIGN KEY (`UserPhone`)
+    REFERENCES `erhuo`.`User` (`UserPhone`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;

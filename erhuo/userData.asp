@@ -39,6 +39,7 @@
         <div class="uda_title clearfix">
             <a href="#">用户个人信息填写</a>
             <a href="./myGoods.asp">我的闲置</a>
+            <a href="./myAgent.asp">我的代销</a>
         </div>
         
         <form action="./upphoto.asp" target="_blank" method="POST" enctype="multipart/form-data">

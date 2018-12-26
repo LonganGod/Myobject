@@ -19,8 +19,8 @@
 			<ul class="left">
                 <li><a href="index.asp">首页</a></li>
                 <li><a href="./GoodsList.asp">商品管理</a></li>
-				<li><a href="./UserManagement.asp">用户管理</a></li>
-				<li><a href="./AgentList.asp">代销管理</a></li>
+                <li><a href="./UserManagement.asp">用户管理</a></li>
+                <li><a href="./AgentList.asp">代销管理</a></li>
 			</ul>
 		</div>
     </div>
@@ -29,7 +29,7 @@
 		<div id="xinxian" class="goods_content active clearfix">
 			<div class="isgoods">
 				<%
-					str1 = "SELECT * FROM erhuo.goods"
+					str1 = "SELECT * FROM erhuo.Agent"
 					set rs1 = conn.execute(str1) 
 					valus = 0
 					do while not rs1.eof
@@ -52,17 +52,17 @@
 					<%
                         rows = j * 15
                         set rs = server.createobject("adodb.recordset")
-						str2 = "select * from erhuo.goods limit " & rows & ", 15"       
+						str2 = "select * from erhuo.Agent limit " & rows & ", 15"       
 						rs.open str2, conn, 1
 						Do While Not rs.eof
 					%>
 					<li>
-						<form action="./GoodsDetails.asp">
-							<img src="<%=server.htmlencode(rs("GoodsImg1"))%>" alt="">
-							<h6><%=server.htmlencode(rs("GoodsTitle"))%></h6>
-							<p><%=server.htmlencode(rs("GoodsUserName"))%>&nbsp;<%=server.htmlencode(rs("GoodsUserPhone"))%></p>
-							<span class="money"><%=server.htmlencode(rs("GoodsMoney1"))%>元</span>
-							<input type="hidden" name="GoodsID" value="<%=server.htmlencode(rs("GoodsID"))%>">
+						<form action="./AgentManagement.asp">
+							<img src="<%=server.htmlencode(rs("AgentImg1"))%>" alt="">
+							<h6><%=server.htmlencode(rs("AgentTitle"))%></h6>
+							<p><%=server.htmlencode(rs("AgentUserName"))%>&nbsp;<%=server.htmlencode(rs("AgentUserPhone"))%></p>
+							<span class="money"><%=server.htmlencode(rs("AgentMoney1"))%>元</span>
+							<input type="hidden" name="AgentID" value="<%=server.htmlencode(rs("AgentID"))%>">
 							<button></button>
 						</form>
 					</li>
@@ -95,7 +95,7 @@
 				</div>
 			</div>
 			<div class="nogoods none">
-				<p>暂无商品</p>
+				<p>暂无代销</p>
 			</div>
 		</div>
 	</div>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <base target="_self">
-    <title>我的闲置</title>
+    <title>我的代销</title>
 
     <link rel="stylesheet" href="./CSS/base.css">
     <link rel="stylesheet" href="./CSS/head.css">
@@ -37,8 +37,8 @@
     <!-- 表单 -->
     <div class="mg_main w">
         <div class="mg_title clearfix">
-            <a href="#">我的闲置</a>
-            <a href="./myAgent.asp">我的代销</a>
+            <a href="#">我的代销</a>
+            <a href="./myGoods.asp">我的闲置</a>
             <a href="./userData.asp">用户个人信息填写</a>
         </div>
         
@@ -47,25 +47,25 @@
                 <%
                     rs.close
 
-                    str1 = "SELECT * FROM erhuo.Goods WHERE UserPhone = '" & phone & "' ORDER BY GoodsID DESC"    
+                    str1 = "SELECT * FROM erhuo.Agent WHERE UserPhone = '" & phone & "' ORDER BY AgentID DESC"    
                     rs.open str1, conn, 1
                     Do While Not rs.eof
                 %>
                 <li class="mygoods clearfix">
-                    <form action="./managementMyGoods.asp" method="POST" target="_self">
-                        <img src="<%=server.htmlencode(rs("GoodsImg1"))%>" alt="">
+                    <form action="./managementMyAgent.asp" method="POST" target="_self">
+                        <img src="<%=server.htmlencode(rs("AgentImg1"))%>" alt="">
                         <div class="myGood_info">
-                            <h2><%=server.htmlencode(rs("GoodsTitle"))%></h2>
-                            <p><strong><%=server.htmlencode(rs("GoodsMoney1"))%></strong>元</p>
-                            <p><%=server.htmlencode(rs("GoodsData"))%></p>
+                            <h2><%=server.htmlencode(rs("AgentTitle"))%></h2>
+                            <p><strong><%=server.htmlencode(rs("AgentMoney1"))%></strong>元</p>
+                            <p><%=server.htmlencode(rs("AgentData"))%></p>
                         </div>
                         <div class="myGood_info">
-                            <p><%=server.htmlencode(rs("GoodsUserPhone"))%></p>
-                            <p><%=server.htmlencode(rs("GoodsUserPlace"))%></p>
+                            <p><%=server.htmlencode(rs("AgentUserPhone"))%></p>
+                            <p><%=server.htmlencode(rs("AgentUserPlace"))%></p>
                         </div>
                         <div class="btns">
-                            <button>删 除 闲 置</button>
-                            <input type="hidden" id="goodsID" name="goodsID" value="<%=server.htmlencode(rs("GoodsID"))%>">
+                            <button>删 除 代 销</button>
+                            <input type="hidden" id="AgentID" name="AgentID" value="<%=server.htmlencode(rs("AgentID"))%>">
                         </div>
                     </form>
                 </li>
@@ -78,7 +78,7 @@
             </ul>
 
             <div class="no_goods">
-                <p>对不起,您还没有发布闲置，<a href="./release.asp">前去发布</a></p>
+                <p>对不起,您还没有发布代销，<a href="./agent.asp">前去发布</a></p>
             </div>
         </div>
     </div>
