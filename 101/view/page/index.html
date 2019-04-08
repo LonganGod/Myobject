@@ -1,0 +1,173 @@
+{{extend './layouts/layout.html'}}
+
+{{block 'title'}}
+<title>101°-河工程自己的二手货交易网站</title>
+{{/block}}
+
+{{block 'css'}}
+<link rel="stylesheet" href="/assets/css/index.css">
+{{/block}}
+
+{{block 'js'}}
+<script src="/assets/js/index.js"></script>
+<script src="/assets/lib/template/template-web.js"></script>
+{{/block}}
+
+{{block 'body'}}
+<!-- 分类 -->
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="/assets/images/shop01.png" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>电子产品<br>系列</h3>
+                        <a href="/store?type=1" class="cta-btn">现在 查看 <i class="iconfont icon-right-circle-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="/assets/images/shop03.png" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>书籍<br>系列</h3>
+                        <a href="/store?type=2" class="cta-btn">现在 查看 <i
+                                class="iconfont icon-right-circle-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="/assets/images/shop02.png" alt="">
+                    </div>
+                    <div class="shop-body">
+                        <h3>生活用品<br>系列</h3>
+                        <a href="/store?type=4" class="cta-btn">现在 查看 <i
+                                class="iconfont icon-right-circle-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--最新-->
+<div id="newPro" class="section">
+    <div class="container">
+        <div class="row">
+            <!--标题-->
+            <div class="col-md-12 products-title clearfix">
+                <h3 class="left">最新商品</h3>
+                <a class="right" href="/store?type=0">查看更多</a>
+            </div>
+            <!--商品列表-->
+            <div class="col-md-12 products-tabs">
+                <div class="row products-content">
+                    <!--插入数据-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--广告-->
+<div class="banner hidden-xs hidden-sm">
+    <div class="banner-content">
+        <h2>101°</h2>
+        <h1>河工程自己的二手交易网站</h1>
+        <a class="neadLogin" type="addgoods" href="javascript:;">我要发布闲置</a>
+    </div>
+</div>
+
+<!--电子产品-->
+<div id="dianzi" class="section">
+    <div class="container">
+        <div class="row">
+            <!--标题-->
+            <div class="col-md-12 products-title clearfix">
+                <h3 class="left">电子产品</h3>
+                <a class="right" href="/store?type=1">查看更多</a>
+            </div>
+            <!--商品列表-->
+            <div class="col-md-12 products-tabs">
+                <div class="row products-content">
+                    <!--插入数据-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--item-->
+<div class="M-marginBottom section">
+    <div class="container">
+        <div class="row">
+            <div id="shuji" class="item col-sm-4">
+                <div class="item-title clearfix">
+                    <h3 class="left">书籍</h3>
+                    <a class="right" href="/store?type=2">查看更多</a>
+                </div>
+                <ul class="item-list">
+                    <!--插入数据-->
+                </ul>
+            </div>
+            <div id="fuzhuang" class="item col-sm-4">
+                <div class="item-title clearfix">
+                    <h3 class="left">服装</h3>
+                    <a class="right" href="/store?type=3">查看更多</a>
+                </div>
+                <ul class="item-list">
+                    <!--插入数据-->
+                </ul>
+            </div>
+            <div id="shenghuo" class="item col-sm-4">
+                <div class="item-title clearfix">
+                    <h3 class="left">生活用品</h3>
+                    <a class="right" href="/store?type=4">查看更多</a>
+                </div>
+                <ul class="item-list">
+                    <!--插入数据-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}
+{{block 'temp'}}
+<script type="text/html" id="newProData">
+    {#each list#}
+    <div class="col-xs-6 col-md-3">
+        <div class="product">
+            <div class="product-img"><img src="/uploads/goods/{#$value.gicon1#}" alt=""></div>
+            <div class="product-des">
+                <p>{#$value.kname#}</p>
+                <a href="/product?id={#$value.gid#}">{#$value.gname#}</a>
+                <h3 class="money">￥{#$value.gprice#}
+                    <del>￥{#$value.goriginal#}</del>
+                </h3>
+            </div>
+        </div>
+    </div>
+    {#/each#}
+</script>
+<script type="text/html" id="otherProData">
+    {#each list#}
+    <li>
+        <div class="item-img"><img src="/uploads/goods/{#$value.gicon1#}" alt=""></div>
+        <div class="item-content">
+            <p>{#$value.kname#}</p>
+            <a href="/product?id={#$value.gid#}">{#$value.gname#}</a>
+            <h4 class="money">￥{#$value.gprice#}
+                <del>￥{#$value.goriginal#}</del>
+            </h4>
+        </div>
+    </li>
+    {#/each#}
+</script>
+{{/block}}

@@ -1,0 +1,68 @@
+.classify {
+    margin: 60px auto;
+    max-width: 1320px;
+    h2 {
+        font-size: 40px;
+        color: #cc0d30;
+        font-weight: 700;
+        margin: 100px 0 40px -80px;
+    }
+
+
+    p {
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    a {
+        display: inline-block;
+        margin: 30px 20px;
+        font-size: 30px;
+        color: #00174f;
+        position: relative;
+
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 70%;
+            height: 5px;
+            background-color: #cc0d30;
+            transition: all .5s;
+        }
+        
+    }
+
+    a:hover {
+        color: #00174f;
+
+        &:after {
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .classify {
+        position: relative;
+        h2 {
+            margin: 0;
+            position: absolute;
+            left: 10%;
+            bottom: 15%;
+        }
+        a {
+            margin: 5% 0 0 5%;
+            font-size: 20px;
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .classify {
+        position: relative;
+        h2 {
+            font-size: 25px;
+        }
+    }
+}

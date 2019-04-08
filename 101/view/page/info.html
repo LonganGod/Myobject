@@ -1,0 +1,205 @@
+{{extend './layouts/layout.html'}}
+
+{{block 'title'}}
+<title>用户信息</title>
+{{/block}}
+
+{{block 'css'}}
+<link rel="stylesheet" href="/assets/css/info.css">
+{{/block}}
+
+{{block 'js'}}
+<script src="/assets/lib/template/template-web.js"></script>
+<script src="/assets/lib/validate/jquery.validate.js"></script>
+<script src="/assets/js/checkForm.js"></script>
+<script src="/assets/js/info.js"></script>
+{{/block}}
+
+{{block 'body'}}
+<!--个人信息-->
+<div class="userInfo-main">
+    <div class="container">
+        <div class="row">
+            <div class="userInfo-nav col-md-3">
+                <ul class="clearfix">
+                    <li class="col-xs-3 col-md-12 text-center">个人信息查看 <i class="iconfont icon-right"></i></li>
+                    <li class="col-xs-3 col-md-12 text-center">个人信息管理 <i class="iconfont icon-right"></i></li>
+                    <li class="col-xs-3 col-md-12 text-center">闲置商品查看 <i class="iconfont icon-right"></i></li>
+                    <li class="col-xs-3 col-md-12 text-center">我的消息查看 <i class="iconfont icon-right"></i></li>
+                </ul>
+            </div>
+            <div class="infoBox col-md-9">
+                <div class="pubInfo userInfo-list clearfix">
+                    <table class="col-xs-12">
+                        <tbody>
+                        <!--插入数据-->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pubInfo userInfo-form clearfix">
+                    <form action="/editUser" method="post" id="editUser">
+                        <table class="col-xs-12">
+                            <tbody>
+                            <!--插入数据-->
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <div class="pubInfo goodsInfo-list clearfix">
+                    <table class="text-center">
+                        <thead>
+                        <tr>
+                            <th class="col-xs-1 col-md-1">序号</th>
+                            <th class="col-xs-3 col-md-2">图片</th>
+                            <th class="col-xs-3 col-md-1">名称</th>
+                            <th class="col-md-2 hidden-sm hidden-xs">价格</th>
+                            <th class="col-md-2 hidden-sm hidden-xs">描述</th>
+                            <th class="col-md-2 hidden-sm hidden-xs">发布时间</th>
+                            <th class="col-xs-5 col-md-2">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!--插入数据-->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pubInfo userNews-list clearfix">
+                    <table class="text-center">
+                        <thead>
+                        <tr>
+                            <th class="col-xs-2 col-md-1">序号</th>
+                            <th class="col-xs-5 col-md-2">标题</th>
+                            <th class="col-md-5 hidden-sm hidden-xs">内容</th>
+                            <th class="col-md-2 hidden-sm hidden-xs">发布时间</th>
+                            <th class="col-xs-5 col-md-2">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <!--插入数据-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}
+
+{{block 'temp'}}
+<script type="text/html" id="userInfo-list">
+    <tr>
+        <td class="col-md-3">头&emsp;像</td>
+        <td class="col-md-9">
+            <div class="uicon">
+                <img src="/uploads/userphoto/{#uicon#}" alt="">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-md-3">昵&emsp;称</td>
+        <td class="col-md-9">{#nickname#}</td>
+    </tr>
+    <tr>
+        <td class="col-md-3">手机号</td>
+        <td class="col-md-9">{#uphone#}</td>
+    </tr>
+    <tr>
+        <td class="col-md-3">QQ&ensp;号</td>
+        <td class="col-md-9">{#uqq#}</td>
+    </tr>
+    <tr>
+        <td class="col-md-3">邮&emsp;箱</td>
+        <td class="col-md-9">{#uemail#}</td>
+    </tr>
+    <tr>
+        <td class="col-md-3">地&emsp;址</td>
+        <td class="col-md-9">{#uhome#}</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button id="loginOut">注销账户</button>
+        </td>
+    </tr>
+</script>
+<script type="text/html" id="userInfo-form">
+    <input type="hidden" name="uid" value="{#uid#}">
+    <tr>
+        <td class="col-md-3"><label for="uicon">头&emsp;像</label></td>
+        <td class="col-md-9">
+            <div class="uicon">
+                <img src="/uploads/userphoto/{#uicon#}" alt="">
+                <input type="file" id="uicon">
+                <input type="hidden" name="uicon" value="{#uicon#}">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-md-3"><label for="nickname">昵&emsp;称</label></td>
+        <td class="col-md-9">
+            <input type="text" name="nickname" id="nickname" placeholder="请输入昵称" value="{#nickname#}">
+            <span></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-md-3"><label for="uphone">手机号</label></td>
+        <td class="col-md-9">
+            <input type="text" name="uphone" id="uphone" placeholder="请输入手机号" value="{#uphone#}">
+            <span></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-md-3"><label for="uqq">QQ&ensp;号</label></td>
+        <td class="col-md-9">
+            <input type="text" name="uqq" id="uqq" placeholder="请输入QQ号" value="{#uqq#}">
+            <span></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-md-3"><label for="uemail">邮&emsp;箱</label></td>
+        <td class="col-md-9">
+            <input type="text" name="uemail" id="uemail" placeholder="请输入地址" value="{#uemail#}">
+            <span></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-md-3"><label for="uhome">地&emsp;址</label></td>
+        <td class="col-md-9">
+            <input type="text" name="uhome" id="uhome" placeholder="请输入地址" value="{#uhome#}">
+            <span></span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button id="uinfo-form-btn" type="submit">提交</button>
+        </td>
+    </tr>
+</script>
+<script type="text/html" id="goodsInfo-list">
+    {#each goods#}
+    <tr>
+        <td>{#$index+1#}</td>
+        <td>
+            <div class="goodsImg">
+                <img src="/uploads/goods/{#$value.gicon1#}" alt="">
+            </div>
+        </td>
+        <td>{#$value.gname#}</td>
+        <td class="hidden-sm hidden-xs">{#$value.gprice#}</td>
+        <td class="hidden-sm hidden-xs">{#$value.gdes#}</td>
+        <td class="hidden-sm hidden-xs">{#$value.gdate#}</td>
+        <td><a href="/editGoods?id={#$value.gid#}">编辑</a> <a href="javascript:;" class="delGoodBtn" goodId="{#$value.gid#}">删除</a></td>
+    </tr>
+    {#/each#}
+</script>
+<script type="text/html" id="userNews-list">
+    {#each news#}
+    <tr>
+        <td>{#$index+1#}</td>
+        <td>{#$value.ntitle#}</td>
+        <td class="hidden-sm hidden-xs">{#$value.ndes#}</td>
+        <td class="hidden-sm hidden-xs">{#$value.ndate#}</td>
+        <td><a href="javascript:;" class="delNewsBtn" newsId="{#$value.nid#}">删除</a></td>
+    </tr>
+    {#/each#}
+</script>
+{{/block}}

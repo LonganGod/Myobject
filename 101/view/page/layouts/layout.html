@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    {{block 'title'}} {{/block}}
+    <!--css-->
+    <link rel="stylesheet" href="/assets/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="/assets/lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    {{block 'css'}} {{/block}}
+    <!--js-->
+    <script src="/assets/lib/jQuery/jquery-1.12.1.js"></script>
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/lib/nprogress/nprogress.js"></script>
+    <script src="/assets/js/layout.js"></script>
+    {{block 'js'}} {{/block}}
+</head>
+<body>
+<script>NProgress.start()</script>
+<!--头部-->
+<header class="hidden-xs hidden-sm">
+    <!--顶部导航-->
+    <div class="top-header">
+        <div class="container clearfix">
+            <ul class="header-links left">
+                <li><a href="javascript:"><i class="iconfont icon-phone-fill"></i> 155 3108 5321</a></li>
+                <li><a href="javascript:"><i class="iconfont icon-mail-fill"></i> ws15531085321@163.com</a></li>
+                <li><a href="javascript:"><i class="iconfont icon-location-fill"></i> 河北工程大学 朝曦楼 628</a></li>
+            </ul>
+            <ul class="header-links right">
+                <li><a class="neadLogin" type="news" href="javascript:;"><i class="iconfont icon-bell-fill"></i> 我的消息</a></li>
+                <li><a class="neadLogin" type="goods" href="javascript:;"><i class="iconfont icon-shop"></i> 我的商品</a></li>
+                <li><a class="neadLogin" type="info" href="javascript:;"><i class="iconfont icon-user"></i> 个人信息</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 头部主体 -->
+    <div class="main-header">
+        <div class="container">
+            <div class="row clearfix">
+                <!-- LOGO -->
+                <div class="col-sm-3">
+                    <div class="header-logo">
+                        <a href="/index" class="logo">
+                            <img src="/assets/images/logo-light.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 搜索框 -->
+                <div class="col-sm-6">
+                    <div class="header-search">
+                        <form class="clearfix" id="search">
+                            <select name="gkind" class="input-select col-md-3">
+                                <option value="0">所有商品</option>
+                                <option value="1">电子产品</option>
+                                <option value="2">书籍</option>
+                                <option value="3">服装</option>
+                                <option value="4">生活用品</option>
+                                <option value="5">其他</option>
+                            </select>
+                            <input name="gname" class="input col-md-6" placeholder="请输入您想搜索的内容">
+                            <button type="button" class="search-btn col-md-3">搜索</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 其他 -->
+                <div class="col-sm-3 clearfix">
+                    <div class="header-other">
+                        <a class="neadLogin" type="addgoods" href="javascript:;">
+                            <i class="iconfont icon-plus-circle"></i>
+                            <p>发布闲置商品</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<header class="M-header hidden-lg hidden-md">
+    <div class="container">
+        <div class="row">
+            <div class="M-logo col-xs-2">
+                <a href="#"><img src="/assets/images/logo-light.png" alt=""></a>
+            </div>
+            <div class="M-search col-xs-9">
+                <input class="input col-xs-9" placeholder="请输入您想搜索的内容">
+                <button class="search-btn col-xs-3">搜索</button>
+            </div>
+            <a class="M-user col-xs-1 neadLogin" type="info" href="javascript:;"><i class="iconfont icon-user"></i></a>
+        </div>
+    </div>
+</header>
+
+<!--导航-->
+<nav class="M-marginTop mainBox-nav">
+    <div class="container">
+        <ul class="main-nav nav">
+            <li class="left active"><a href="/index">首页</a></li>
+            <li class="left"><a href="/store?type=0">最新商品</a></li>
+            <li class="left"><a href="/store?type=1">电子产品</a></li>
+            <li class="left"><a href="/store?type=2">书籍</a></li>
+            <li class="left"><a href="/store?type=3">服装</a></li>
+            <li class="left"><a href="/store?type=4">生活用品</a></li>
+            <li class="left"><a href="/store?type=5">其他</a></li>
+        </ul>
+    </div>
+</nav>
+
+{{block 'body'}} {{/block}}
+
+<!--底部-->
+<footer class="hidden-xs hidden-sm">
+    <div class="footer-top section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">关于我们</h3>
+                        <p>我们专注于做河北工程大学自己的二手货交易平台</p>
+                        <ul class="footer-links">
+                            <li><a href="javascript:"><i class="iconfont icon-location-fill"></i>河北工程大学 朝曦楼 628</a></li>
+                            <li><a href="javascript:"><i class="iconfont icon-phone-fill"></i>155 3108 5321</a></li>
+                            <li><a href="javascript:"><i class="iconfont icon-mail-fill"></i> ws15531085321@163.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">分类</h3>
+                        <ul class="footer-links">
+                            <li><a href="/store?type=0">最新商品</a></li>
+                            <li><a href="/store?type=1">电子产品</a></li>
+                            <li><a href="/store?type=2">书籍</a></li>
+                            <li><a href="/store?type=3">服装</a></li>
+                            <li><a href="/store?type=4">生活用品</a></li>
+                            <li><a href="/store?type=5">其他</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">安全性</h3>
+                        <span class="iconfont icon-insurance-fill"></span>
+                        <span class="iconfont icon-safetycertificate-f"></span>
+                        <span class="iconfont icon-propertysafety-fill"></span>
+                        <span class="iconfont icon-securityscan-fill"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="footer saoma">
+                        <h3 class="footer-title">扫码</h3>
+                        <ul class="footer-links">
+                            <li><a class=" iconfont icon-wechat-fill" href="#"></a></li>
+                            <li><a class=" iconfont icon-QQ" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>101° 河北工程大学自己的二手货交易平台</p>
+    </div>
+</footer>
+<footer class="M-footer container hidden-lg hidden-md">
+    <div class="row">
+        <div class="footer-nav col-xs-4"><a class="neadLogin" type="news" href="javascript:;"><i class="iconfont icon-bell-fill"></i>我的消息</a></div>
+        <div class="footer-nav col-xs-4"><a class="neadLogin" type="goods" href="javascript:;"><i class="iconfont icon-shop"></i>我的商品</a></div>
+        <div class="footer-nav col-xs-4"><a class="neadLogin" type="addgoods" href="javascript:;"><i class="iconfont icon-plus-circle"></i>发布闲置</a></div>
+    </div>
+</footer>
+
+{{block 'temp'}} {{/block}}
+<script>NProgress.done()</script>
+</body>
+</html>

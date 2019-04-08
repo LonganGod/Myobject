@@ -1,0 +1,78 @@
+.product-main {
+    margin-top: 30px;
+
+    .product-img-list {
+        li {
+            border: 1px solid #E4E7ED;
+
+            &.active {
+                border: 1px solid #D10024;
+            }
+        }
+    }
+
+    //放大镜
+    .zoom {
+        display: inline-block;
+        position: relative;
+        width: 90%;
+        left: 5%;
+        overflow: hidden;
+
+        img {
+            display: block;
+            background-color: #fff;
+
+            &::selection {
+                background-color: transparent;
+            }
+        }
+
+        .zoomImg {
+            width: 150% !important;
+            height: 150% !important;
+        }
+    }
+
+    //商品详情
+    .product-details {
+        .product-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2B2D42;
+            margin: 10px 0 15px 0;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 10px 0 15px 0;
+            color: #D10024;
+
+            del {
+                font-size: 70%;
+                font-weight: 400;
+                color: #8D99AE;
+            }
+        }
+
+        p {
+            line-height: 2;
+            margin-bottom: 15px;
+        }
+
+        .product-link {
+            margin: 10px 0 15px 0;
+            font-size: 16px;
+
+            a:hover {
+                color: #D10024;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .section {
+        margin: 30px 0;
+    }
+}

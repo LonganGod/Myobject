@@ -1,0 +1,82 @@
+.footer-top {
+  background: #15161D;
+  border-top: 3px solid #D10024;
+}
+.footer-top .footer {
+  margin: 30px 0;
+}
+.footer-top .footer h3 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+.footer-top .footer i,
+.footer-top .footer a,
+.footer-top .footer p,
+.footer-top .footer span {
+  color: #B9BABC;
+}
+.footer-top .footer p {
+  margin-bottom: 15px;
+}
+.footer-top .footer i {
+  color: #D10024;
+  margin-right: 5px;
+}
+.footer-top .footer a:hover {
+  color: #D10024;
+}
+.footer-top .footer li {
+  margin-top: 15px;
+}
+.footer-top .footer li:first-child {
+  margin: 0;
+}
+.footer-top .footer span {
+  font-size: 40px;
+}
+.footer-top .footer span:nth-child(2):hover {
+  color: green;
+}
+.footer-top .footer span:nth-child(3):hover {
+  color: orange;
+}
+.footer-top .footer span:nth-child(4):hover {
+  color: blue;
+}
+.footer-top .footer span:nth-child(5):hover {
+  color: red;
+}
+.footer-top .saoma a {
+  font-size: 40px;
+}
+.footer-bottom {
+  padding: 30px 0;
+  background-color: #1E1F29;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 20px;
+  color: #B9BABC;
+  opacity: 0.5;
+}
+.M-footer {
+  border-top: 1px solid #15161D;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.M-footer .footer-nav {
+  text-align: center;
+  background-color: #D10024;
+}
+.M-footer .footer-nav a {
+  color: #fff;
+  font-size: 10px;
+}
+.M-footer .footer-nav i {
+  display: block;
+  font-size: 19px;
+  color: #fff;
+}

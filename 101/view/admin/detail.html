@@ -1,0 +1,59 @@
+{{extend './layouts/layout.html'}}
+
+{{block 'title'}}<title>用户详情</title>{{/block}}
+
+{{block 'body'}}
+<main role="main">
+    <section class="jumbotron mb-0 bg-white text-center">
+        <div class="container">
+            <img class="img-thumbnail mb-2 rounded-circle" src="/uploads/userphoto/{{uicon}}" alt="heima" width="128">
+            <h1 class="display-4" style="line-height: 1.5;">{{nickname}}</h1>
+            <p class="lead text-muted">{{uphone}}</p>
+            <div>
+                <a href="javascript:;" id="warnBtn" userId="{{uid}}" class="btn btn-primary my-2">警告</a>
+                <a href="javascript:;" id="delBtn" userId="{{uid}}" class="btn btn-danger my-2">删除</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="py-5 bg-light">
+        <div class="container">
+            <span class="col-md-3">邮箱：{{uemail}}</span>
+            <span class="col-md-3">QQ：{{uqq}}</span>
+            <span class="col-md-3">地址：{{uhome}}</span>
+            <span class="col-md-3">注册时间：{{udate}}</span>
+        </div>
+    </div>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div userId="{{uid}}" id="goods" class="row">
+                <!--添加数据-->
+            </div>
+        </div>
+    </section>
+</main>
+{{/block}}
+
+{{block 'temp'}}
+<script src="/assets/js/detail.admin.js"></script>
+<script id="goodsList" type="text/html">
+    {#each list#}
+    <div class="col-lg-4 col-md-6 item">
+        <div class="card mb-4">
+            <div class="card-img-top py-4 bg-dark text-center">
+                <img class="img-thumbnail mb-2 rounded-circle" src="/uploads/goods/{#$value.gicon1#}" alt="heima"
+                     width="128">
+                <h3 class="card-title text-light">{#$value.gname#}</h3>
+                <p class="card-text" style="color: #fff;">{#$value.kname#}</p>
+            </div>
+            <div class="card-body">
+                <p class="card-text goodsdes">{#$value.gdes#}</p>
+                <p class="card-text" style="color: red;">价钱：{#$value.gprice#}</p>
+                <a href="javascript:" delID="{#$value.gid#}" class="card-link text-danger del">删除</a>
+            </div>
+        </div>
+    </div>
+    {#/each#}
+</script>
+{{/block}}

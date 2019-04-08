@@ -1,0 +1,58 @@
+.banner_pc {
+    a {
+        margin-top: 30px;
+        display: block;
+        position: relative;
+        .index_logo {
+            width: 470px;
+            position: absolute;
+            top: 40%;
+            left: 80px;
+        }
+    }
+}
+@media only screen and (max-width: 1384px) {
+    .banner_pc {
+        a:last-child {
+            .index_logo {
+                width: 380px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    .banner_phone {
+        overflow: hidden;
+        a {
+            display: block;
+            margin-top: 5%;
+            position: relative;
+            .index_logo {
+                width: 50%;
+                position: absolute;
+                bottom: 5%;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+            span {
+                position: absolute;
+                top: 0;
+                left: 2%;
+                z-index: 3;
+                font-size: 40px;
+                color: #ca1134;
+                font-weight: 700;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px) {
+    .banner_phone {
+        a {
+            span {
+                font-size: 30px;
+            }
+        }
+    }
+}

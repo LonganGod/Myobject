@@ -1,0 +1,139 @@
+body, h1, h2, h3, h4, h5, h6, img, a, input, span,
+ul, ol, dl, li, dt, dd, p, div, table, tr, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+img, input, a, span, i, em, b, strong, s, u,
+select, button {
+    vertical-align: middle;
+    font-style: normal;
+    border: 0 none;
+    outline: 0 none;
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+        color: #000;
+        text-decoration: none;
+    }
+
+    &:focus {
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+.clearfix {
+    zoom: 1;
+
+    &:before {
+        content: '';
+        height: 0;
+        line-height: 0;
+        visibility: hidden;
+        display: block;
+        clear: both;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+//商品标题
+.products-title {
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    a:hover {
+        color: #D10024;
+    }
+}
+
+//商品详情
+.products-tabs {
+    div {
+        padding: 0 5px;
+    }
+
+    .product {
+        border: 2px solid #E4E7ED;
+        transition: 0.3s;
+        padding-bottom: 30px;
+
+        .product-img {
+            width: 100%;
+            position: relative;
+            padding-bottom: 100%;
+
+            img {
+                position: absolute;
+                width: 80%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &:hover {
+            border-color: #D10024;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .product-des {
+        text-align: center;
+
+        p {
+            font-size: 12px;
+            color: #8D99AE;
+        }
+
+        a {
+            font-weight: 700;
+            transition: 0.2s;
+
+            &:hover {
+                color: #D10024;
+            }
+        }
+
+        .money {
+            margin-top: 8px;
+            color: #D10024;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        del {
+            font-size: 14px;
+            color: #ccc;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .M-marginTop {
+        margin-top: 50px;
+    }
+
+    .M-marginBottom {
+        margin-bottom: 40px;
+    }
+}

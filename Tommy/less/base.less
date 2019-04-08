@@ -1,0 +1,47 @@
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl,
+li, dt, dd, table, tr, td, input, img {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none !important;
+}
+
+input, img {
+    vertical-align: top;
+    border: 0 none;
+    outline: 0 none;
+}
+
+img {
+    width: 100%;
+}
+
+.clearfix::after {
+    contain: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}

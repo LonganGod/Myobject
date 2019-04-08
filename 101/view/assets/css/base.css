@@ -1,0 +1,165 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+a,
+input,
+span,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+div,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+img,
+input,
+a,
+span,
+i,
+em,
+b,
+strong,
+s,
+u,
+select,
+button {
+  vertical-align: middle;
+  font-style: normal;
+  border: 0 none;
+  outline: 0 none;
+  text-decoration: none;
+  color: #000;
+}
+img:hover,
+input:hover,
+a:hover,
+span:hover,
+i:hover,
+em:hover,
+b:hover,
+strong:hover,
+s:hover,
+u:hover,
+select:hover,
+button:hover {
+  color: #000;
+  text-decoration: none;
+}
+img:focus,
+input:focus,
+a:focus,
+span:focus,
+i:focus,
+em:focus,
+b:focus,
+strong:focus,
+s:focus,
+u:focus,
+select:focus,
+button:focus {
+  color: #000;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before {
+  content: '';
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.products-title {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.products-title a:hover {
+  color: #D10024;
+}
+.products-tabs div {
+  padding: 0 5px;
+}
+.products-tabs .product {
+  border: 2px solid #E4E7ED;
+  transition: 0.3s;
+  padding-bottom: 30px;
+}
+.products-tabs .product .product-img {
+  width: 100%;
+  position: relative;
+  padding-bottom: 100%;
+}
+.products-tabs .product .product-img img {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.products-tabs .product:hover {
+  border-color: #D10024;
+}
+.products-tabs .product:last-child {
+  margin-right: 0;
+}
+.products-tabs .product-des {
+  text-align: center;
+}
+.products-tabs .product-des p {
+  font-size: 12px;
+  color: #8D99AE;
+}
+.products-tabs .product-des a {
+  font-weight: 700;
+  transition: 0.2s;
+}
+.products-tabs .product-des a:hover {
+  color: #D10024;
+}
+.products-tabs .product-des .money {
+  margin-top: 8px;
+  color: #D10024;
+  font-size: 18px;
+  font-weight: 700;
+}
+.products-tabs .product-des del {
+  font-size: 14px;
+  color: #ccc;
+}
+@media only screen and (max-width: 992px) {
+  .M-marginTop {
+    margin-top: 50px;
+  }
+  .M-marginBottom {
+    margin-bottom: 40px;
+  }
+}

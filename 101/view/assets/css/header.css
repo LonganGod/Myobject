@@ -1,0 +1,131 @@
+.top-header {
+  padding: 10px 0;
+  background-color: #1E1F29;
+  overflow: hidden;
+}
+.top-header .header-links li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 12px;
+}
+.top-header .header-links i {
+  color: #D10024;
+  margin-right: 5px;
+}
+.top-header .header-links a {
+  color: #fff;
+}
+.top-header .header-links a:hover {
+  color: #D10024;
+}
+.main-header {
+  padding: 15px 0;
+  background-color: #15161D;
+}
+.main-header .header-logo img {
+  width: 169px;
+}
+.main-header .header-search {
+  padding: 15px 0;
+}
+.main-header .header-search .input-select {
+  height: 40px;
+  border-radius: 20px 0 0 20px;
+}
+.main-header .header-search .input {
+  height: 40px;
+}
+.main-header .header-search .search-btn {
+  height: 40px;
+  border-radius: 0 20px 20px 0;
+  color: #fff;
+  background-color: #D10024;
+}
+.main-header .header-other {
+  padding: 10px 0;
+  text-align: center;
+}
+.main-header .header-other a:hover i,
+.main-header .header-other a:hover p {
+  color: #D10024;
+}
+.main-header .header-other i,
+.main-header .header-other p {
+  color: #fff;
+}
+.main-header .header-other i {
+  font-size: 20px;
+}
+.mainBox-nav {
+  overflow-x: auto;
+  border-bottom: 2px solid #E4E7ED;
+}
+.mainBox-nav .main-nav {
+  width: 510px;
+}
+.mainBox-nav .main-nav li.active a {
+  color: #D10024;
+  background-color: #fff;
+}
+.mainBox-nav .main-nav li.active a:after {
+  width: 100%;
+}
+.mainBox-nav .main-nav a {
+  padding: 15px 0;
+  margin: 0 15px;
+  position: relative;
+}
+.mainBox-nav .main-nav a:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #D10024;
+  position: absolute;
+  bottom: 13px;
+  transition: 0.3s;
+}
+.mainBox-nav .main-nav a:hover {
+  color: #D10024;
+  background-color: #fff;
+}
+.mainBox-nav .main-nav a:hover:after {
+  width: 100%;
+}
+.M-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #15161D;
+  padding: 10px 0;
+}
+.M-header .M-logo {
+  text-align: center;
+  padding: 0 0 0 5px;
+}
+.M-header .M-logo img {
+  width: auto;
+  max-height: 20px;
+}
+.M-header .M-search input,
+.M-header .M-search button {
+  height: 30px;
+}
+.M-header .M-search input {
+  border-radius: 15px 0 0 15px;
+}
+.M-header .M-search button {
+  padding: 0;
+  background-color: #D10024;
+  border-radius: 0 15px 15px 0;
+  color: #fff;
+}
+.M-header .M-user {
+  padding: 0;
+}
+.M-header .M-user i {
+  font-size: 21px;
+  color: #fff;
+}

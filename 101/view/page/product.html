@@ -1,0 +1,101 @@
+{{extend './layouts/layout.html'}}
+
+{{block 'title'}}
+<title>商品详情</title>
+{{/block}}
+
+{{block 'css'}}
+<link rel="stylesheet" href="/assets/css/product.css">
+{{/block}}
+
+{{block 'js'}}
+<script src="/assets/lib/jQuery/jquery.zoom.js"></script>
+<script src="/assets/lib/template/template-web.js"></script>
+<script src="/assets/js/product.js"></script>
+{{/block}}
+
+{{block 'body'}}
+<!--主体-->
+<div class="product-main container M-marginBottom">
+    <div class="row">
+        <div class="product-main-box">
+            <!--插入详情数据-->
+        </div>
+        <!--同类商品-->
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <!--标题-->
+                    <div class="col-md-12 products-title clearfix">
+
+                    </div>
+                    <!--商品列表-->
+                    <div class="col-md-12 products-tabs">
+                        <div class="row products-content">
+                            <!--插入数据-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}
+
+{{block 'temp'}}
+<script type="text/html" id="ProData">
+    <div class="col-md-5 col-md-push-2">
+        <div class='zoom' id='ex'>
+            <img src="/uploads/goods/{#gicon1#}" alt="">
+        </div>
+    </div>
+    <div class="col-md-2 col-md-pull-5">
+        <ul class="product-img-list clearfix">
+            <li class="col-md-12 col-xs-4 active"><img src="/uploads/goods/{#gicon1#}" alt=""></li>
+            <li class="col-md-12 col-xs-4"><img src="/uploads/goods/{#gicon2#}" alt=""></li>
+            <li class="col-md-12 col-xs-4"><img src="/uploads/goods/{#gicon3#}" alt=""></li>
+        </ul>
+    </div>
+    <div class="col-md-5">
+        <div class="product-details">
+            <h2 class="product-name">{#gname#}</h2>
+            <h3 class="product-price">￥{#gprice#}
+                <del class="product-old-price">￥{#goriginal#}</del>
+            </h3>
+            <p>{#gdes#}</p>
+            <ul class="product-link clearfix">
+                <li class="left">类别：</li>
+                <li class="left"><a href="#">{#kname#}</a></li>
+            </ul>
+            <ul class="product-link clearfix">
+                <li class="left">联系人：</li>
+                <li class="left">{#nickname#}</li>
+            </ul>
+            <ul class="product-link clearfix">
+                <li class="left">联系电话：</li>
+                <li class="left">{#uphone#}</li>
+            </ul>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="sameKindProTitle">
+    <h3 class="left">同类商品</h3>
+    <a class="right" href="/store?type={#kid#}">查看更多</a>
+</script>
+<script type="text/html" id="sameKindProData">
+    {#each list#}
+    <div class="col-xs-6 col-md-3">
+        <div class="product">
+            <div class="product-img"><img src="/uploads/goods/{#$value.gicon1#}" alt=""></div>
+            <div class="product-des">
+                <p>{#$value.kname#}</p>
+                <a href="/product?id={#$value.gid#}">{#$value.gname#}</a>
+                <h3 class="money">￥{#$value.gprice#}
+                    <del>￥{#$value.goriginal#}</del>
+                </h3>
+            </div>
+        </div>
+    </div>
+    {#/each#}
+</script>
+{{/block}}

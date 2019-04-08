@@ -1,0 +1,91 @@
+{{extend './layouts/layout.html'}}
+
+{{block 'title'}}
+<title>编辑闲置</title>
+{{/block}}
+
+{{block 'css'}}
+<link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+<link rel="stylesheet" href="/assets/css/goods.css">
+{{/block}}
+
+{{block 'js'}}
+<script src="/assets/lib/validate/jquery.validate.js"></script>
+<script src="/assets/js/editgoods.js"></script>
+{{/block}}
+
+{{block 'body'}}
+<div class="addgoods-main M-marginBottom">
+    <div class="container">
+        <div class="row">
+            <form id="editForm" style="margin-top: 20px;" class="layui-form layui-form-pane" action="">
+                <div class="imgs" style="display: block;">
+                    <img src="/uploads/goods/{{gicon1}}" alt="">
+                    <img src="/uploads/goods/{{gicon2}}" alt="">
+                    <img src="/uploads/goods/{{gicon3}}" alt="">
+                </div>
+
+                <div class="layui-upload">更换图片
+                    <input type="file" style="opacity: 0;">
+                    <input type="hidden" name="gicon1" value="{{gicon1}}">
+                </div>
+                <div class="layui-upload">更换图片
+                    <input type="file" style="opacity: 0;">
+                    <input type="hidden" name="gicon2" value="{{gicon2}}">
+                </div>
+                <div class="layui-upload">更换图片
+                    <input type="file" style="opacity: 0;">
+                    <input type="hidden" name="gicon3" value="{{gicon3}}">
+                </div>
+
+                <input type="hidden" name="gid" value="{{gid}}">
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商品标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="gname" autocomplete="off" placeholder="请输入商品标题" class="layui-input"
+                               value="{{gname}}">
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">商品信息描述</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="请输入商品描述信息" class="layui-textarea" name="gdes">{{gdes}}</textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商品类型</label>
+                    <div class="layui-input-block">
+                        <select name="gkind">
+                            <option value="" selected></option>
+                            {{each list}}
+                            {{if ($value.kid == kid)}}
+                            <option value="{{$value.kid}}" selected>{{$value.kname}}</option>
+                            {{else}}
+                            <option value="{{$value.kid}}" selected>{{$value.kname}}</option>
+                            {{/if}}
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商品价格</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="gprice" autocomplete="off" placeholder="请输入商品价格" class="layui-input" value="{{gprice}}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商品原价</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="goriginal" autocomplete="off" placeholder="请输入商品原价"
+                               class="layui-input" value="{{goriginal}}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <button class="layui-btn" type="submit">修改</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{/block}}

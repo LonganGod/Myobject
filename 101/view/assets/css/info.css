@@ -1,0 +1,163 @@
+.userInfo-main {
+  margin: 20px 0;
+}
+.userInfo-main .userInfo-nav {
+  height: 80vh;
+  padding: 0;
+  background-color: #f0f3f9;
+}
+.userInfo-main .userInfo-nav li {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+}
+.userInfo-main .userInfo-nav li i {
+  font-size: 14px;
+  vertical-align: top;
+}
+.userInfo-main .userInfo-nav li.active {
+  color: #FFF;
+  background-color: #D10024;
+}
+.userInfo-main .userInfo-nav li.active i {
+  color: #FFF;
+}
+.userInfo-main .infoBox {
+  min-height: 80vh;
+  border-top: 1px solid #E4E7ED;
+  padding: 0;
+}
+.userInfo-main .infoBox .pubInfo {
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: 20px;
+}
+.userInfo-main .infoBox .pubInfo td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.userInfo-main .infoBox .pubInfo td:first-child {
+  text-align: center;
+}
+.userInfo-main .infoBox .pubInfo.active {
+  display: block;
+}
+.userInfo-main .infoBox .pubInfo .goodsImg {
+  position: relative;
+  padding-bottom: 100%;
+}
+.userInfo-main .infoBox .pubInfo .goodsImg img {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.userInfo-main .infoBox .userInfo-list tr:nth-child(2n-1),
+.userInfo-main .infoBox .userInfo-form tr:nth-child(2n-1) {
+  background-color: #E4E7ED;
+}
+.userInfo-main .infoBox .userInfo-list .uicon,
+.userInfo-main .infoBox .userInfo-form .uicon {
+  width: 15%;
+  padding-bottom: 15%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.userInfo-main .infoBox .userInfo-list .uicon img,
+.userInfo-main .infoBox .userInfo-form .uicon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.userInfo-main .infoBox .userInfo-list input,
+.userInfo-main .infoBox .userInfo-form input {
+  background-color: transparent;
+  display: inline-block;
+}
+.userInfo-main .infoBox .userInfo-list input[type="file"],
+.userInfo-main .infoBox .userInfo-form input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  padding: 0;
+}
+.userInfo-main .infoBox .userInfo-list button,
+.userInfo-main .infoBox .userInfo-form button {
+  width: 100px;
+  height: 40px;
+  background-color: #D10024;
+  color: #fff;
+}
+.userInfo-main .infoBox .goodsInfo-list table,
+.userInfo-main .infoBox .userNews-list table {
+  table-layout: fixed;
+  width: 100%;
+}
+.userInfo-main .infoBox .goodsInfo-list tr:nth-child(2n),
+.userInfo-main .infoBox .userNews-list tr:nth-child(2n) {
+  background-color: #E4E7ED;
+}
+.userInfo-main .infoBox .goodsInfo-list th,
+.userInfo-main .infoBox .userNews-list th {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #E4E7ED;
+}
+.userInfo-main .infoBox .goodsInfo-list td,
+.userInfo-main .infoBox .userNews-list td {
+  padding: 10px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.userInfo-main .infoBox .goodsInfo-list td:last-child a,
+.userInfo-main .infoBox .userNews-list td:last-child a {
+  padding: 3px 5px;
+  color: #fff;
+  border-radius: 3px;
+}
+.userInfo-main .infoBox .goodsInfo-list td:last-child a:nth-child(1),
+.userInfo-main .infoBox .userNews-list td:last-child a:nth-child(1) {
+  background-color: yellowgreen;
+}
+.userInfo-main .infoBox .goodsInfo-list td:last-child a:nth-child(2),
+.userInfo-main .infoBox .userNews-list td:last-child a:nth-child(2) {
+  background-color: red;
+}
+@media only screen and (max-width: 992px) {
+  .userInfo-main {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  .userInfo-main .userInfo-nav {
+    height: auto;
+  }
+  .userInfo-main .userInfo-nav li {
+    font-size: 1.4vw;
+  }
+  .userInfo-main .userInfo-nav i {
+    display: none;
+  }
+  .userInfo-main .infoBox {
+    height: auto;
+    border: 0;
+  }
+  .userInfo-main .infoBox .pubInfo td {
+    padding: 15px 9px;
+    position: relative;
+  }
+  .userInfo-main .infoBox .userInfo-form span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+  }
+}

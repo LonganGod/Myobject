@@ -1,0 +1,49 @@
+{{extend './layouts/layout.html'}}
+
+{{block 'title'}}
+<title>更多商品</title>
+{{/block}}
+
+{{block 'css'}}
+<link rel="stylesheet" href="/assets/css/store.css">
+{{/block}}
+
+{{block 'js'}}
+<script src="/assets/js/store.js"></script>
+<script src="/assets/lib/template/template-web.js"></script>
+{{/block}}
+
+{{block 'body'}}
+<!--商品-->
+<div class="goods container M-marginBottom">
+    <div class="row">
+        <div class="col-md-12 products-tabs">
+            <div class="row products-content">
+                <!--插入数据-->
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}
+
+{{block 'temp'}}
+<script type="text/html" id="storeData">
+    {#if list.length==0#}
+    <div style="line-height: 400px;text-align: center;color: #b3b6bc;font-size: 20px">暂时没有商品</div>
+    {#/if#}
+    {#each list#}
+    <div class="col-md-3 col-sm-6">
+        <div class="product">
+            <div class="product-img"><img src="/uploads/goods/{#$value.gicon1#}" alt=""></div>
+            <div class="product-des">
+                <p>{#$value.kname#}</p>
+                <a href="/product?id={#$value.gid#}">{#$value.gname#}</a>
+                <h3 class="money">￥{#$value.gprice#}
+                    <del>￥{#$value.goriginal#}</del>
+                </h3>
+            </div>
+        </div>
+    </div>
+    {#/each#}
+</script>
+{{/block}}
